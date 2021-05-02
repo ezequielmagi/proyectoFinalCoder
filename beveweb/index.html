@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!--  -->
+    <link rel="stylesheet" href="./assets/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeVeWeb</title>
+    <script src="./assets/js/products.js"></script>
+  </head>
+  <body>
+    <!-- nuevo encabezado -->
+
+    <div class="real-header">
+      <div class="container">
+        <div class="header-search-container">
+          <form action="search" method="GET" class="">
+            <input type="serch" placeholder="Buscar" autocomplete="off" />
+          </form>
+        </div>
+        <div class="container-logo">
+          <img src="./assets/img/logochico.jpg" alt="" />
+        </div>
+        <div class="header-login-container">
+          <ul>
+            <li><a href="">Login</a></li>
+          </ul>
+          <ul>
+            <li><a href="">canasta</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav">
+      <!-- nuevo encabezado -->
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quienes somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- products -->
+    <div class="filtros">
+      <select id="tipoComidas">
+        <option value="Todas">Todas</option>
+        <option value="Comidas">Comidas</option>
+        <option value="Postres">Postres</option>
+      </select>
+      <button>Filtrar</button>
+    </div>
+
+    <section id="products"></section>
+    <!-- footer -->
+    <section class="footer">
+      <div class="container-fluid">
+        <p>logo</p>
+      </div>
+    </section>
+
+    <!-- js propio -->
+    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/main.js"></script> -->
+    <!-- js bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
