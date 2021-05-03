@@ -16,6 +16,7 @@
     />
     <!--  -->
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./stylesModal.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +41,9 @@
             <li><a href="">Login</a></li>
           </ul>
           <ul>
-            <li><a href="">canasta</a></li>
+            <li>
+              <a id="carrito">canasta <span id="contadorCarrito"></span></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -71,7 +74,6 @@
         <option value="Comidas">Comidas</option>
         <option value="Postres">Postres</option>
       </select>
-      <button>Filtrar</button>
     </div>
 
     <section id="products"></section>
@@ -82,8 +84,29 @@
       </div>
     </section>
 
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar">X</button>
+        <div id="carrito-contenedor">
+          <div class="productoEnCarrito">
+            <p></p>
+            <p></p>
+            <button class="boton-eliminar">
+              <i class="fas fa-trash-alt">X</i>
+            </button>
+          </div>
+        </div>
+        <p class="precioProducto">
+          Precio total: $ <span id="precioTotal"></span>
+        </p>
+      </div>
+    </div>
+
     <!-- js propio -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/carrito.js"></script>
+
     <!-- <script src="./assets/main.js"></script> -->
     <!-- js bootstrap -->
     <script
