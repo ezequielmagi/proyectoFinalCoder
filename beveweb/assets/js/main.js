@@ -44,10 +44,10 @@ function actualizarCarrito() {
   carrito.forEach((producto) => {
     contenedorCarrito.innerHTML += `
     <div class="productoEnCarrito">
-            <p>${producto.articulo}</p>
+            <p class="productoEnCarrito--articulo">${producto.articulo}</p>
             <p>Precio: $ ${producto.precio}</p>
             <button onclick=eliminarProducto(${producto.id}) class="boton-eliminar">
-              <i class="fas fa-trash-alt">X</i>
+              <i class="material-icons">delete</i>
             </button>
           </div>
     `;

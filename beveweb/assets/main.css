@@ -92,8 +92,8 @@
 }
 
 .filtros {
-  height: 20px;
-  width: 100%;
+  height: 50px;
+  width: 80%;
   margin: 15px auto;
   display: flex;
   justify-content: center;
