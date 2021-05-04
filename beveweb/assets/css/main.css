@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Quicksand;
+}
+
+.header-search-container {
+  align-content: flex-start;
+  align-self: center;
+}
+.header-search-container input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.header-login-container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.header-login-container ul {
+  margin: 25px;
+  list-style: none;
+}
+
+.header-login-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-logo img {
+  width: 15vw;
+}
+
+.header-nav {
+  margin: 5vh 7vh auto;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-bottom: 1px solid brown;
+}
+
+.header-nav a {
+  margin-bottom: 5vh;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+#products {
+  height: 75vh;
+  margin: 5vh 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.products {
+  max-width: 300px;
+  max-height: 464px;
+}
+.products img {
+  width: 300px;
+}
+.products h5 {
+  border-top: 1px solid black;
+  padding-top: 5px;
+  margin-top: 15px;
+}
+
+.products .precio--producto {
+  font-weight: bold;
+}
+
+.products button {
+  background-color: chocolate;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  color: aliceblue;
+}
+
+.filtros {
+  height: 50px;
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+select {
+  border: none;
+  height: 25px;
+  width: 10vw;
+}
+
+.footer {
+  background-color: brown;
+  height: 300px;
+}
