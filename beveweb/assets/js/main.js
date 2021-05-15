@@ -29,7 +29,7 @@ function ListarProductos(arrayProductos) {
 }
 
 function agregarAlCarrito(id) {
-  const productoElegido = products.find((p) => p.id == id);
+  const productoElegido = products.find((p) => p.id === id);
   if (productoElegido) {
     carrito.push(productoElegido);
   }
@@ -61,7 +61,7 @@ function actualizarCarrito() {
 }
 
 function eliminarProducto(id) {
-  const productoEliminar = carrito.find((producto) => producto.id == id);
+  const productoEliminar = carrito.find((producto) => producto.id === id);
   const indice = carrito.indexOf(productoEliminar);
   carrito.splice(indice, 1);
   actualizarCarrito();
@@ -69,10 +69,10 @@ function eliminarProducto(id) {
 
 function filtrarPorTipoDeComida() {
   const listaFiltrada = products.filter(
-    (el) => el.categoria == tipoComidas.value
+    (el) => el.categoria === tipoComidas.value
   );
 
-  if (tipoComidas.value == "Todas") {
+  if (tipoComidas.value === "Todas") {
     ListarProductos(products);
   } else {
     ListarProductos(listaFiltrada);

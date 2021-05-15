@@ -22,11 +22,14 @@
     <!--  -->
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/stylesModal.css" />
+    <link rel="stylesheet" href="./assets/css/stylesLogin.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BeVeWeb</title>
+    <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/products.js"></script>
+
+    <title>BeVeWeb</title>
   </head>
   <body>
     <!-- nuevo encabezado -->
@@ -34,8 +37,8 @@
     <div class="real-header">
       <div class="container">
         <div class="header-search-container">
-          <form action="search" method="GET" class="">
-            <input type="serch" placeholder="Buscar" autocomplete="off" />
+          <form method="GET" class="">
+            <input placeholder="Buscar" autocomplete="off" />
           </form>
         </div>
         <div class="container-logo">
@@ -43,7 +46,7 @@
         </div>
         <div class="header-login-container">
           <ul>
-            <li><a href="">Login</a></li>
+            <li><a id="userLogin">Iniciar Sesión</a></li>
           </ul>
           <ul>
             <li>
@@ -110,9 +113,34 @@
       </div>
     </div>
 
+    <!-- iniciar sesion -->
+    <div class="login-contenedor">
+      <div class="login-contenedor--body">
+        <h1>Ingresar con tu usuario</h1>
+        <form>
+          <label for="email">Correo electrónico</label>
+          <input
+            type="text"
+            name="email"
+            id="userEmail"
+            placeholder="Ej.: pepito@gmail.com"
+          />
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" id="userPassword" />
+          <button id="btnIngresar">Ingresar</button>
+        </form>
+        <div class="registro-contenedor">
+          <h3>Aún no estas registrado?</h3>
+          <h4>No te pierdas los beneficios!</h4>
+          <button id="btnRegistro">Registrame</button>
+        </div>
+      </div>
+    </div>
+
     <!-- js propio -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/carrito.js"></script>
+    <script src="./assets/js/login.js"></script>
 
     <!-- <script src="./assets/main.js"></script> -->
     <!-- js bootstrap -->
