@@ -1,40 +1,80 @@
 //tomamos el contenedor html donde renderizamos los productos
+const tipoComidas = document.getElementById("tipoComidas");
 const listaProductos = document.getElementById("products");
 
-//Renderizamos los productos tomados del products.js
-ListarProductos(products);
+tipoComidas.addEventListener("change", () => {
+  // filtrarPorTipoDeComida();
+  listarproductos();
+});
 
 //inicializamos el carrito
 let carrito = [];
 
-//funcion que crea la lista de productos
-function ListarProductos(arrayProductos) {
-  //inicializamos vacio el contenedor para evitar que se dupliquen los productos al
-  //filtrar con filtrarPorTipoDeComida
-  listaProductos.innerHTML = "";
+const listarproductos = async () => {
+  if (tipoComidas.value === "Todas") {
+    const resp = await fetch(
+      "https://beve02-b2200-default-rtdb.firebaseio.com/productos.json"
+    );
+    const element = await resp.json();
 
-  arrayProductos.forEach((producto) => {
-    let div = document.createElement("div");
-    div.classList.add("products");
-    div.innerHTML = `
+    listaProductos.innerHTML = "";
+
+    element.forEach((producto) => {
+      let div = document.createElement("div");
+      div.classList.add("products");
+      div.innerHTML = `
+    <div class="individual">
     <img src="${producto.img}"/>
-    <h5>${producto.articulo}</h5>
-    <p>${producto.description}</p>
+    <h5 class="producto-titulo">${producto.articulo}</h5>
+    <p class="producto-description">${producto.description}</p>
     <p class="precio--producto">Precio: $ ${producto.precio}</p>
     <button onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
+    </div>
     `;
 
-    listaProductos.appendChild(div);
-  });
-}
+      listaProductos.appendChild(div);
+    });
+  } else {
+    //
 
-function agregarAlCarrito(id) {
-  const productoElegido = products.find((p) => p.id === id);
-  if (productoElegido) {
-    carrito.push(productoElegido);
+    const resp = await fetch(
+      "https://beve02-b2200-default-rtdb.firebaseio.com/productos.json"
+    );
+    const element = await resp.json();
+
+    const listaFiltrada = element.filter(
+      (el) => el.categoria === tipoComidas.value
+    );
+
+    listaProductos.innerHTML = "";
+
+    listaFiltrada.forEach((producto) => {
+      let div = document.createElement("div");
+      div.classList.add("products");
+      div.innerHTML = `
+    <div class="individual">
+    <img src="${producto.img}"/>
+    <h5 class="producto-titulo">${producto.articulo}</h5>
+    <p class="producto-description">${producto.description}</p>
+    <p class="precio--producto">Precio: $ ${producto.precio}</p>
+    <button onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
+    </div>
+    `;
+
+      listaProductos.appendChild(div);
+    });
   }
-  actualizarCarrito();
-}
+};
+
+//refactorizar
+// function agregarAlCarrito(id) {
+
+//   const productoElegido = products.find((p) => p.id === id);
+//   if (productoElegido) {
+//     carrito.push(productoElegido);
+//   }
+//   actualizarCarrito();
+// }
 
 function actualizarCarrito() {
   const precioTotal = document.getElementById("precioTotal");
@@ -66,21 +106,4 @@ function eliminarProducto(id) {
   carrito.splice(indice, 1);
   actualizarCarrito();
 }
-
-function filtrarPorTipoDeComida() {
-  const listaFiltrada = products.filter(
-    (el) => el.categoria === tipoComidas.value
-  );
-
-  if (tipoComidas.value === "Todas") {
-    ListarProductos(products);
-  } else {
-    ListarProductos(listaFiltrada);
-  }
-}
-
-const tipoComidas = document.getElementById("tipoComidas");
-
-tipoComidas.addEventListener("change", () => {
-  filtrarPorTipoDeComida();
-});
+listarproductos();

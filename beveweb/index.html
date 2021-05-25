@@ -27,7 +27,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/products.js"></script>
 
     <title>BeVeWeb</title>
   </head>
@@ -137,6 +136,29 @@
         </div>
       </div>
     </div>
+
+    <!-- firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAk65RyQPO46BRQ8lffr0Gt5UOeNUhJ2Kw",
+        authDomain: "beve02-b2200.firebaseapp.com",
+        databaseURL: "https://beve02-b2200-default-rtdb.firebaseio.com",
+        projectId: "beve02-b2200",
+        storageBucket: "beve02-b2200.appspot.com",
+        messagingSenderId: "71260526477",
+        appId: "1:71260526477:web:46548c325afe8031cc8fc4",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
 
     <!-- js propio -->
     <script src="./assets/js/main.js"></script>
