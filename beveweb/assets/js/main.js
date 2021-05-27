@@ -2,6 +2,8 @@
 const tipoComidas = document.getElementById("tipoComidas");
 const listaProductos = document.getElementById("products");
 
+const URL = "https://beve02-b2200-default-rtdb.firebaseio.com/productos.json";
+
 tipoComidas.addEventListener("change", () => {
   // filtrarPorTipoDeComida();
   listarproductos();
@@ -12,9 +14,7 @@ let carrito = [];
 
 const listarproductos = async () => {
   if (tipoComidas.value === "Todas") {
-    const resp = await fetch(
-      "https://beve02-b2200-default-rtdb.firebaseio.com/productos.json"
-    );
+    const resp = await fetch(URL);
     const element = await resp.json();
 
     listaProductos.innerHTML = "";
@@ -70,11 +70,22 @@ const listarproductos = async () => {
 // function agregarAlCarrito(id) {
 
 //   const productoElegido = products.find((p) => p.id === id);
-//   if (productoElegido) {
-//     carrito.push(productoElegido);
-//   }
-//   actualizarCarrito();
+// if (productoElegido) {
+//   carrito.push(productoElegido);
 // }
+// actualizarCarrito();
+// }
+
+const agregarAlCarrito = async (id) => {
+  const resp = await fetch(URL);
+  const data = await resp.json();
+
+  const productoElegido = data.find((p) => p.id === id);
+  if (productoElegido) {
+    carrito.push(productoElegido);
+  }
+  actualizarCarrito();
+};
 
 function actualizarCarrito() {
   const precioTotal = document.getElementById("precioTotal");
