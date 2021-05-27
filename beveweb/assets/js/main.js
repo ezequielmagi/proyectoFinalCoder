@@ -66,16 +66,6 @@ const listarproductos = async () => {
   }
 };
 
-//refactorizar
-// function agregarAlCarrito(id) {
-
-//   const productoElegido = products.find((p) => p.id === id);
-// if (productoElegido) {
-//   carrito.push(productoElegido);
-// }
-// actualizarCarrito();
-// }
-
 const agregarAlCarrito = async (id) => {
   const resp = await fetch(URL);
   const data = await resp.json();
