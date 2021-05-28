@@ -28,7 +28,7 @@
   background-color: #fcfbf7;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 .preVenta-header {
@@ -91,20 +91,38 @@
 
 .preVenta-envio {
   width: 100%;
-  display: inline-flex;
-  justify-content: space-evenly;
+  /* display: inline-flex;
+  justify-content: space-evenly; */
   /* height: 30%; */
   display: inline-flex;
 }
 
 .preVenta-envio form {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 70%;
 }
 
 .preVenta-envio label {
   margin: 0;
+  width: 100%;
+  /* grid-area: "b"; */
+}
+.preVenta-envio input {
+  /* grid-area: "a"; */
+  margin: 0;
+  width: 50%;
+}
+
+.preVenta-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 20%;
+  width: 80%;
+  margin: 15px auto;
 }
