@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     />
     <!--  -->
+    <link rel="stylesheet" href="./assets/css/preVenta.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/stylesModal.css" />
     <link rel="stylesheet" href="./assets/css/stylesLogin.css" />
@@ -133,6 +134,58 @@
           <h3>Aún no estas registrado?</h3>
           <h4>No te pierdas los beneficios!</h4>
           <button id="btnRegistro">Registrame</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRE-VENTA -->
+
+    <div class="preVenta-container">
+      <div class="preVenta-body">
+        <div class="preVenta-header">
+          <p>CERRAR</p>
+        </div>
+        <div class="preVenta-producto">
+          <div class="preventa-titulos">
+            <p>PRODUCTO</p>
+            <p>SUBTOTAL</p>
+          </div>
+          <div class="preVenta-descripcion">
+            <div class="preVenta-descripcion--data">
+              <img src="" alt="" />
+              <p>articulo</p>
+              <p>precioUnitario</p>
+              <input type="number" min="1" placeholder="1" />
+            </div>
+            <div class="subTotalCalculado">
+              <p>SubTotalCalculado</p>
+            </div>
+          </div>
+          <div class="preVenta-envio">
+            <form>
+              <label for="domicilio">Envio a domicilio</label>
+              <input
+                type="radio"
+                id="domicilio"
+                name="formaenvio"
+                value="envio"
+              />
+
+              <label for="retiro">Retiro por local</label>
+              <input
+                type="radio"
+                id="retiro"
+                name="formaenvio"
+                value="retiro"
+              />
+            </form>
+
+            <p>costo envio</p>
+          </div>
+          <div class="preVenta-footer">
+            <button>Iniciar compra</button>
+            <button>Seguir comprando</button>
+          </div>
         </div>
       </div>
     </div>

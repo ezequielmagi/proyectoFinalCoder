@@ -111,6 +111,7 @@ select {
 }
 
 .footer {
+  display: none;
   background-color: brown;
   height: 300px;
 }
