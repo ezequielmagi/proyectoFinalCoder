@@ -71,16 +71,23 @@ const agregarAlCarrito = async (id) => {
   const data = await resp.json();
 
   const productoElegido = data.find((p) => p.id === id);
+
+  const preVentaContainer = document.getElementById("preventa");
+  preVentaContainer.classList.toggle("preVenta-active");
+  preVenta(productoElegido);
   if (productoElegido) {
-    carrito.push(productoElegido);
+    //quitamos esto para no agregar el producto al carrito por ahoraaa
+    // carrito.push(productoElegido);
   }
-  actualizarCarrito();
+  // actualizarCarrito();
 };
 
+const nuevoActualizarCarrito = () => {};
+
 function actualizarCarrito() {
-  const precioTotal = document.getElementById("precioTotal");
-  const contadorCarrito = document.getElementById("contadorCarrito");
-  const contenedorCarrito = document.getElementById("carrito-contenedor");
+  // const precioTotal = document.getElementById("precioTotal");
+  // const contadorCarrito = document.getElementById("contadorCarrito");
+  // const contenedorCarrito = document.getElementById("carrito-contenedor");
   contenedorCarrito.innerHTML = "";
   carrito.forEach((producto) => {
     contenedorCarrito.innerHTML += `
