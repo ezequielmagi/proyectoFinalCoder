@@ -63,7 +63,7 @@
 }
 
 #products {
-  height: 75vh;
+  height: 100vh;
   margin: 5vh 20vh;
   display: flex;
   flex-direction: row;
@@ -73,7 +73,8 @@
 
 .products {
   max-width: 300px;
-  max-height: 464px;
+  max-height: 584px;
+  margin: 5px;
 }
 .products img {
   width: 300px;

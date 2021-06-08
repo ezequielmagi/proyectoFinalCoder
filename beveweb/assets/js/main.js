@@ -24,11 +24,13 @@ const listarproductos = async () => {
       div.classList.add("products");
       div.innerHTML = `
     <div class="individual">
-    <img src="${producto.img}"/>
+
+    <img alt:"imagen de producto" src="${producto.img}"/>
     <h5 class="producto-titulo">${producto.articulo}</h5>
     <p class="producto-description">${producto.description}</p>
     <p class="precio--producto">Precio: $ ${producto.precio}</p>
     <button onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
+    
     </div>
     `;
 

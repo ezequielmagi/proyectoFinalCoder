@@ -100,8 +100,6 @@
         </button>
         <div id="carrito-contenedor">
           <div class="productoEnCarrito">
-            <p></p>
-            <p></p>
             <button class="boton-eliminar">
               <i class="material-icons">delete</i>
             </button>
@@ -118,7 +116,7 @@
       <div class="login-contenedor--body">
         <h1>Ingresa con tu usuario</h1>
         <form>
-          <label for="email">Correo electrónico</label>
+          <label for="userEmail">Correo electrónico</label>
           <input
             type="text"
             name="email"
@@ -126,7 +124,7 @@
             placeholder="Ej.: pepito@gmail.com"
             autocomplete="off"
           />
-          <label for="password">Contraseña</label>
+          <label for="userPassword">Contraseña</label>
           <input type="password" name="password" id="userPassword" />
           <button id="btnIngresar">Ingresar</button>
         </form>
@@ -167,27 +165,7 @@
               <p id="subTotalCalculado"></p>
             </div>
           </div>
-          <div class="preVenta-envio">
-            <form>
-              <label for="domicilio">Envio a domicilio</label>
-              <input
-                type="radio"
-                id="domicilio"
-                name="formaenvio"
-                value="envio"
-              />
 
-              <label for="retiro">Retiro por local</label>
-              <input
-                type="radio"
-                id="retiro"
-                name="formaenvio"
-                value="retiro"
-              />
-            </form>
-
-            <p>costo envio</p>
-          </div>
           <div class="preVenta-footer">
             <button>Iniciar compra</button>
             <button>Seguir comprando</button>
