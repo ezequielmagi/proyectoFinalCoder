@@ -26,16 +26,16 @@ let formatoEnvio;
 
 //
 function preVenta(productoElegido) {
-  subTotalCalculado.textContent = `${productoElegido.precio}`;
+  subTotalCalculado.textContent = `$ ${productoElegido.precio}`;
   imgProducto.setAttribute("src", productoElegido.img);
   articulo.textContent = productoElegido.articulo;
-  precioUnitario.textContent = productoElegido.precio;
+  precioUnitario.textContent = `$ ${productoElegido.precio}`;
   idProducto = productoElegido.id;
 
   cantidad.addEventListener("change", (e) => {
     e.preventDefault();
     cantidadActual = parseInt(cantidad.value);
-    subTotalCalculado.textContent = `${
+    subTotalCalculado.textContent = `$ ${
       productoElegido.precio * cantidadActual
     }`;
     finale = `usted se lleva ${cantidadActual} de ${

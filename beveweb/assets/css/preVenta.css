@@ -1,10 +1,9 @@
 .preVenta-container {
-  color: red;
   position: fixed;
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,11 +19,17 @@
   visibility: visible;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: button;
+  margin: 0;
+}
+
 .preVenta-body {
   position: absolute;
   right: 0;
-  top: 0%;
-  height: 100%;
+  top: 0;
+  height: 100vh;
   background-color: #fcfbf7;
   display: flex;
   flex-direction: column;
@@ -32,7 +37,7 @@
 }
 
 .preVenta-header {
-  height: 5%;
+  height: 5vh;
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -48,15 +53,30 @@
 
 .preVenta-producto {
   width: 100%;
+  height: 70vh;
 }
 
-.preventa-titulos {
+.preVenta-description-titulo {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.product-data {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.product-preselected {
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
 }
 
-.preventa-titulos p {
-  width: 50%;
+#cantidad {
+  text-align: center;
+  width: 10%;
+  margin-bottom: 20px;
 }
 
 .preVenta-descripcion {
@@ -64,44 +84,58 @@
   width: 100%;
   height: 80%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid black;
 }
 
 .preVenta-descripcion--data img {
-  border: 1px solid red;
-  width: 10vw;
-  height: 15vh;
+  height: 20vh;
+  margin-bottom: 20px;
+}
+
+.cantidad-pedido {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
 }
 
 .preVenta-descripcion--data {
-  align-content: flex-start;
-  text-align: left;
-  width: 50%;
+  align-content: center;
+  text-align: center;
+  width: 100%;
   height: 100%;
 }
 
-.contador input {
-  width: 40%;
-  text-align: center;
-  border: none;
-  outline: none;
-  /* margin-bottom: 25px; */
+#close-button {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.subTotalCalculado {
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: bold;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .preVenta-footer {
-  background-color: #584849;
+  /* background-color: #584849; */
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 30vh;
   width: 100%;
   margin: 15px auto;
 }
 
 .preVenta-footer button {
-  width: 50%;
+  width: 80%;
   background-color: chocolate;
   border: none;
   padding: 10px;

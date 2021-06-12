@@ -77,6 +77,7 @@
 
     <!-- products -->
     <div class="filtros">
+      <label for="tipoComidas">Filtar por: </label>
       <select id="tipoComidas">
         <option value="Todas">Todas</option>
         <option value="Comidas">Comidas</option>
@@ -141,34 +142,37 @@
     <div id="preventa" class="preVenta-container">
       <div class="preVenta-body">
         <div class="preVenta-header">
-          <p id="close-button">CERRAR</p>
+          <i class="material-icons" id="close-button">close</i>
         </div>
         <div class="preVenta-producto">
-          <div class="preventa-titulos">
-            <p>PRODUCTO</p>
-            <p>SUBTOTAL</p>
-          </div>
           <div class="preVenta-descripcion">
             <div class="preVenta-descripcion--data">
+              <p class="preVenta-description-titulo">Producto seleccionado:</p>
               <img id="imgProducto" alt="" />
-              <p id="articulo"></p>
-              <p id="precioUnitario"></p>
-              <input
-                id="cantidad"
-                type="number"
-                value="1"
-                min="1"
-                placeholder="1"
-              />
+
+              <p id="articulo" class="product-data"></p>
+              <p id="precioUnitario" class="product-data"></p>
+              <div class="cantidad-pedido">
+                <label for="cantidad">Cantidad</label>
+                <input
+                  name="cantidad"
+                  id="cantidad"
+                  type="number"
+                  value="1"
+                  min="1"
+                  placeholder="1"
+                />
+              </div>
             </div>
             <div class="subTotalCalculado">
+              <p>Subtotal (sin envio)</p>
               <p id="subTotalCalculado"></p>
             </div>
           </div>
 
           <div class="preVenta-footer">
             <button>Iniciar compra</button>
-            <button>Seguir comprando</button>
+            <button>Agregar al carrito y seguir comprando</button>
           </div>
         </div>
       </div>
