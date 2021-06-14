@@ -11,6 +11,14 @@
   --bvYellow: #fcfbf7;
 }
 
+.oculto {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
 @media (max-width: 767px) {
   .header {
     align-items: center;
@@ -48,7 +56,6 @@
   .main {
     width: 100%;
     margin: 30px auto;
-    visibility: hidden;
   }
 
   .main-card-container {
@@ -112,6 +119,164 @@
     width: 30%;
     margin: 5px 15px;
   }
+  /*about-me  */
+  .about-me {
+    width: 100%;
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+  }
+  .about-me-container img {
+    margin: 30px auto;
+    width: 100%;
+  }
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .presentacion-nombre {
+    margin: 0px auto 20px;
+    text-align: center;
+  }
+
+  .presentacion-texto {
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .espiga {
+    width: 250px;
+  }
+  /*  */
+  /* contactMe */
+  .contactMe {
+    padding: 30px;
+    width: 100%;
+  }
+  .contactMe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contactMe-text {
+    margin-bottom: 20px;
+  }
+  .contactMe-text p {
+    margin-bottom: 10px;
+  }
+  .question {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .contactMe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactMe-form label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .contactMe-form input,
+  textarea {
+    margin: 10px 0px 20px 0px;
+    outline: none;
+    padding: 3px;
+    width: 100%;
+  }
+  /*  */
+  /* Products */
+  .filtros {
+    background-color: var(--bvYellow);
+    width: 100%;
+  }
+  .filtro-container {
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 10px auto;
+    width: 100%;
+  }
+  .filtros label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .filtros select {
+    font-size: 1.1rem;
+    margin: 5px auto;
+    outline: none;
+    width: 70%;
+  }
+  .myProducts {
+    margin: 20px auto;
+    width: 100%;
+  }
+  .productsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+    width: 75%;
+  }
+  .individual {
+    align-items: center;
+    background-color: var(--bvYellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .individual img {
+    width: 100%;
+  }
+
+  .individual .producto-titulo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px auto;
+  }
+
+  .individual .producto-description {
+    margin-bottom: 10px;
+    padding: 0px 10px;
+  }
+
+  .individual .precio--producto {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .individual button {
+    background-color: chocolate;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 80%;
+  }
   /*  */
 }
 
@@ -174,6 +339,80 @@
     background-size: cover;
     height: 450px;
   }
+  /*about-me  */
+  .about-me {
+    width: 100%;
+  }
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+  }
+  .about-me-container img {
+    margin: 30px auto;
+  }
+
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .presentacion-nombre {
+    margin: 0px auto 20px;
+  }
+
+  .presentacion-texto {
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .espiga {
+    width: 250px;
+  }
+  /*  */
+  /* contactMe */
+  .contactMe {
+    padding: 30px;
+    width: 100%;
+  }
+  .contactMe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contactMe-text {
+    margin-bottom: 20px;
+  }
+  .contactMe-text p {
+    margin-bottom: 10px;
+  }
+  .question {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .contactMe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactMe-form label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .contactMe-form input,
+  textarea {
+    margin: 10px 0px 20px 0px;
+    outline: none;
+    padding: 3px;
+    width: 100%;
+  }
+  /*  */
 
   .footer-card {
     align-items: center;
@@ -203,6 +442,8 @@
     flex-direction: column;
     height: 60%;
     padding: 15px;
+    position: relative;
+    bottom: 0px;
   }
 
   .social-media {
@@ -216,6 +457,90 @@
   .footer img {
     width: 30%;
     margin: 5px 15px;
+  }
+  /*  */
+  /* Products */
+  .filtros {
+    background-color: var(--bvYellow);
+    width: 100%;
+  }
+  .filtro-container {
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 10px auto;
+    width: 100%;
+  }
+  .filtros label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .filtros select {
+    font-size: 1.1rem;
+    margin: 5px auto;
+    outline: none;
+    width: 70%;
+  }
+  .myProducts {
+    margin: 20px auto;
+    width: 100%;
+  }
+  .productsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+    width: 75%;
+  }
+  .individual {
+    align-items: center;
+    background-color: var(--bvYellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .individual img {
+    width: 100%;
+  }
+
+  .individual .producto-titulo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px auto;
+  }
+
+  .individual .producto-description {
+    margin-bottom: 10px;
+    padding: 0px 10px;
+  }
+
+  .individual .precio--producto {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .individual button {
+    background-color: chocolate;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 80%;
   }
   /*  */
 }
@@ -258,8 +583,10 @@
   .main {
     align-content: center;
     align-items: center;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
+    height: 60vh;
     justify-content: space-around;
     width: 100%;
   }
@@ -282,10 +609,42 @@
   #pedidosEspeciales {
     font-size: 1.5rem;
   }
-
-  .footer {
-    height: 20vh;
+  /*about-me  */
+  .about-me {
+    width: 100%;
+  }
+  .about-me-container {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+  }
+  .about-me-container img {
+    margin: 30px auto;
+  }
+  .presentacion {
+    width: 50vw;
+  }
+  .presentacion-nombre {
+    margin: 0px auto 20px;
+    text-align: center;
+  }
+
+  .presentacion-texto {
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .espiga {
+    width: 250px;
+  }
+  .footer {
+    height: 12vh;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
   }
 
   .social-media {
@@ -306,6 +665,116 @@
     text-align: right;
   }
   /*  */
+  /* contactMe */
+
+  .contactMe {
+    margin-bottom: 0px;
+  }
+  .contactMe-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .contactMe-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    justify-content: center;
+    width: 40vw;
+  }
+  .contactMe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+  }
+
+  /*  */
+  /* Products */
+  .filtros {
+    background-color: var(--bvYellow);
+    width: 100%;
+  }
+  .filtro-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    justify-content: center;
+    margin: 0px auto;
+    width: 60%;
+  }
+  .filtros label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .filtros select {
+    font-size: 1.1rem;
+    margin: 5px auto;
+    outline: none;
+    width: 40%;
+  }
+  .myProducts {
+    margin: 0px auto;
+    height: auto;
+    width: 100%;
+  }
+  .productsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0px auto;
+    width: 20%;
+  }
+  .individual {
+    align-items: center;
+    background-color: var(--bvYellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .individual img {
+    width: 100%;
+  }
+
+  .individual .producto-titulo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px auto;
+  }
+
+  .individual .producto-description {
+    margin-bottom: 10px;
+    padding: 0px 10px;
+  }
+
+  .individual .precio--producto {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .individual button {
+    background-color: chocolate;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 80%;
+  }
+  /*  */
 }
 @media (min-width: 1439px) {
   .hero img {
@@ -316,8 +785,9 @@
     width: 60vw;
   }
   .hero li {
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
+
   .main-card-container {
     margin: 0px 0px;
     width: 25vw;
@@ -327,10 +797,22 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    height: 48vh;
+    height: 60vh;
     justify-content: space-around;
     width: 90%;
   }
+
+  .footer {
+    height: 10vh;
+  }
+
+  /* aboutMe */
+
+  .presentacion {
+    width: 70vw;
+    padding: 40px;
+  }
+  /* aboutMe */
   .footer {
     bottom: 0px;
     position: absolute;
@@ -349,11 +831,5 @@
     position: absolute;
     right: 40px;
     width: 5vw;
-  }
-}
-
-@media (min-width: 1439px) {
-  .hero li {
-    font-size: 2.5rem;
   }
 }

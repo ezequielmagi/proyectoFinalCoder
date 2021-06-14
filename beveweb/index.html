@@ -27,21 +27,33 @@
     <title>BeVeWeb</title>
   </head>
   <body>
-    <!-- nuevo encabezado -->
-
     <div class="header">
       <p>Iniciar Sesion</p>
     </div>
     <div class="hero">
       <img src="./assets/img/logo-con-fondo.png" alt="logo principal" />
       <ul>
-        <li>Inicio</li>
-        <li>Sobre MI</li>
-        <li>Mis Productos</li>
-        <li>Contactame!</li>
+        <li id="lnkInicio">Inicio</li>
+        <li id="lnkAboutMe">Sobre MI</li>
+        <li id="lnkMyProducts">Mis Productos</li>
+        <li id="lnkContactMe">Contactame!</li>
       </ul>
     </div>
-    <div class="main">
+    <div class="filtros oculto" id="filter">
+      <div class="filtro-container">
+        <label for="tipoComidas">Filtar por: </label>
+        <select id="tipoComidas">
+          <option value="Todas">Todas</option>
+          <option value="Comidas">Comidas</option>
+          <option value="Postres">Postres</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="myProducts oculto" id="myProducts">
+      <div class="productsContainer" id="products"></div>
+    </section>
+    <div class="main" id="mainPage">
       <div class="main-card-container">
         <div class="main-card-1"></div>
         <div class="footer-card">
@@ -61,8 +73,52 @@
         </div>
       </div>
     </div>
-    
+    <!-- about-me -->
+    <div class="about-me oculto" id="aboutMePage">
+      <div class="about-me-container">
+        <img src="./assets/img/dai.png" alt="Foto Daiana" />
+        <div class="presentacion">
+          <h3 class="presentacion-nombre">Hola! soy Daiana Bertoldi</h3>
+          <p class="presentacion-texto">
+            <u>AMO</u> cocinar y sobre todo lo dulce. A hacer todo de nuevo
+            porque hay muchas diferencias con la repostería tradicional... pero
+            todo lo hago con mucho <u>AMOR</u> y cuidando que los productos que
+            use sean <u>VEGANOS</u> y de la mejor calidad. Disfruto mucho de
+            hacerlo y siento que doy amor y sabor en mis productos
+          </p>
+          <img src="./assets/img/Espiga.png" alt="espiga" class="espiga" />
+        </div>
+      </div>
     </div>
+    <!-- //about-me -->
+    <!-- contactMe -->
+    <div class="contactMe oculto" id="contactMe">
+      <div class="contactMe-container">
+        <div class="contactMe-text">
+          <p>¿Tenes alguna receta que te gustaría compartir conmigo?</p>
+          <p>¿Te gustaría invitarme para algún evento?</p>
+          <p>¿Queres sumar mis productos a tu negocio?</p>
+          <p class="question">¿QUE ESTAS ESPERANDO?</p>
+        </div>
+        <div class="contactMe-form">
+          <form action="">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombreMensaje" />
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="emailMensaje" />
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+              placeholder="Dejame tu mensaje!"
+            ></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- //contactMe -->
     <div class="footer">
       <p class="footer-p" id="sigamosEnContacto">Sigamos en contacto:</p>
       <div class="social-media">
@@ -81,10 +137,12 @@
         <option value="Comidas">Comidas</option>
         <option value="Postres">Postres</option>
       </select>
-    </div> -->
+    </div>
 
-    <!-- <section id="products"></section> -->
-    <!-- footer -->
+    <section class="myProducts">
+      <div class="productsContainer" id="products"></div>
+    </section> -->
+    <!--  -->
 
     <div class="modal-contenedor">
       <div class="modal-carrito">
@@ -199,6 +257,7 @@
     <script src="./assets/js/carrito.js"></script>
     <script src="./assets/js/login.js"></script>
     <script src="./assets/js/preventa.js"></script>
+    <script src="./assets/js/navigation.js"></script>
 
     <!-- <script src="./assets/main.js"></script> -->
     <!-- js bootstrap -->
