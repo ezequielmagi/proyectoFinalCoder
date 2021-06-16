@@ -273,6 +273,7 @@
     border: none;
     border-radius: 50px;
     color: aliceblue;
+    cursor: pointer;
     margin-bottom: 5px;
     padding: 10px;
     width: 80%;
@@ -538,6 +539,7 @@
     border: none;
     border-radius: 50px;
     color: aliceblue;
+    cursor: pointer;
     margin-bottom: 5px;
     padding: 10px;
     width: 80%;
@@ -770,6 +772,7 @@
     border: none;
     border-radius: 50px;
     color: aliceblue;
+    cursor: pointer;
     margin-bottom: 5px;
     padding: 10px;
     width: 80%;

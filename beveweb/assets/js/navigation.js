@@ -3,6 +3,11 @@ const about = document.getElementById("aboutMePage");
 const contact = document.getElementById("contactMe");
 const myProducts = document.getElementById("myProducts");
 const filter = document.getElementById("filter");
+const btnLogin = document.getElementById("login");
+const btnPasteleria = document.getElementById("Pasteleria");
+const btnSalados = document.getElementById("Salados");
+const btnPedidosEspeciales = document.getElementById("PedidosEspeciales");
+let listaComidas;
 
 const linkInicio = document.getElementById("lnkInicio");
 const linkAboutMe = document.getElementById("lnkAboutMe");
@@ -54,11 +59,48 @@ linkContactMe.addEventListener("click", (evento) => {
 
 linkMyProducts.addEventListener("click", (evento) => {
   evento.preventDefault();
+  tipoComidas.value = "Todas";
+  listarproductos();
   filter.style.display = "block";
   myProducts.style.display = "block";
   contact.style.display = "none";
   main.style.display = "none";
   about.style.display = "none";
-  let target = evento.target.id;
-  console.log(target);
+});
+
+btnSalados.addEventListener("click", (evento) => {
+  evento.preventDefault();
+  filter.style.display = "block";
+  myProducts.style.display = "block";
+  contact.style.display = "none";
+  main.style.display = "none";
+  about.style.display = "none";
+
+  evento.target.grupo;
+  tipoComidas.value = "Comidas";
+
+  listarproductos();
+});
+btnPedidosEspeciales.addEventListener("click", (evento) => {
+  evento.preventDefault();
+  contact.style.display = "block";
+  main.style.display = "none";
+  about.style.display = "none";
+  filter.style.display = "none";
+  myProducts.style.display = "none";
+});
+
+btnPasteleria.addEventListener("click", (evento) => {
+  evento.preventDefault();
+
+  filter.style.display = "block";
+  myProducts.style.display = "block";
+  contact.style.display = "none";
+  main.style.display = "none";
+  about.style.display = "none";
+
+  evento.target.grupo;
+  tipoComidas.value = "Postres";
+
+  listarproductos();
 });

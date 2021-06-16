@@ -77,26 +77,27 @@ const agregarAlCarrito = async (id) => {
   const preVentaContainer = document.getElementById("preventa");
   preVentaContainer.classList.toggle("preVenta-active");
   preVenta(productoElegido);
+  carrito.push(productoElegido);
   if (productoElegido) {
     //quitamos esto para no agregar el producto al carrito por ahoraaa
     // carrito.push(productoElegido);
   }
-  // actualizarCarrito();
+  actualizarCarrito(productoElegido);
 };
 
 const nuevoActualizarCarrito = () => {};
 
-function actualizarCarrito() {
+function actualizarCarrito(productoElegido) {
   // const precioTotal = document.getElementById("precioTotal");
   // const contadorCarrito = document.getElementById("contadorCarrito");
-  // const contenedorCarrito = document.getElementById("carrito-contenedor");
+  const contenedorCarrito = document.getElementById("carrito-contenedor");
   contenedorCarrito.innerHTML = "";
-  carrito.forEach((producto) => {
+  carrito.forEach((productoElegido) => {
     contenedorCarrito.innerHTML += `
     <div class="productoEnCarrito">
-            <p class="productoEnCarrito--articulo">${producto.articulo}</p>
-            <p>Precio: $ ${producto.precio}</p>
-            <button onclick=eliminarProducto(${producto.id}) class="boton-eliminar">
+            <p class="productoEnCarrito--articulo">${productoElegido.articulo}</p>
+            <p>Precio: $ ${productoElegido.precio}</p>
+            <button onclick=eliminarProducto(${productoElegido.id}) class="boton-eliminar">
               <i class="material-icons">delete</i>
             </button>
           </div>

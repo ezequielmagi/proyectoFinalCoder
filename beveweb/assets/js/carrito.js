@@ -2,6 +2,7 @@ const botonAbrir = document.getElementById("carrito");
 const contenedorModal = document.getElementsByClassName("modal-contenedor")[0];
 botonAbrir.addEventListener("click", () => {
   contenedorModal.classList.toggle("modal-active");
+  preVentaContainer.classList.toggle("preVenta-active");
 });
 
 const botonCerrar = document.getElementById("carritoCerrar");

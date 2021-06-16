@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="header">
-      <p>Iniciar Sesion</p>
+      <p id="login">Iniciar Sesion</p>
     </div>
     <div class="hero">
       <img src="./assets/img/logo-con-fondo.png" alt="logo principal" />
@@ -54,19 +54,19 @@
       <div class="productsContainer" id="products"></div>
     </section>
     <div class="main" id="mainPage">
-      <div class="main-card-container">
+      <div class="main-card-container" id="Pasteleria">
         <div class="main-card-1"></div>
         <div class="footer-card">
           <p class="footer-p">Pasteleria</p>
         </div>
       </div>
-      <div class="main-card-container">
+      <div class="main-card-container" id="Salados">
         <div class="main-card-2"></div>
         <div class="footer-card">
           <p class="footer-p">Salados</p>
         </div>
       </div>
-      <div class="main-card-container">
+      <div class="main-card-container" id="PedidosEspeciales">
         <div class="main-card-3"></div>
         <div class="footer-card">
           <p class="footer-p" id="pedidosEspeciales">Pedidos Especiales</p>
@@ -129,21 +129,7 @@
       </div>
       <img src="./assets/img/greenHeart.png" alt="amor verde" id="greenHeart" />
     </div>
-    <!-- products -->
-    <!-- <div class="filtros">
-      <label for="tipoComidas">Filtar por: </label>
-      <select id="tipoComidas">
-        <option value="Todas">Todas</option>
-        <option value="Comidas">Comidas</option>
-        <option value="Postres">Postres</option>
-      </select>
-    </div>
-
-    <section class="myProducts">
-      <div class="productsContainer" id="products"></div>
-    </section> -->
     <!--  -->
-
     <div class="modal-contenedor">
       <div class="modal-carrito">
         <h3>Productos en la cesta:</h3>
@@ -164,8 +150,8 @@
     </div>
 
     <!-- iniciar sesion -->
-    <div class="login-contenedor">
-      <div class="login-contenedor--body">
+    <div class="login-contenedor oculto" id="login-contenedor">
+      <div class="login-contenedor--body" id="login-contenedor--body">
         <h1>Ingresa con tu usuario</h1>
         <form>
           <label for="userEmail">Correo electrónico</label>
@@ -222,7 +208,7 @@
           </div>
 
           <div class="preVenta-footer">
-            <button>Iniciar compra</button>
+            <button id="carrito">Iniciar compra</button>
             <button>Agregar al carrito y seguir comprando</button>
           </div>
         </div>

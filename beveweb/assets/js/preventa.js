@@ -11,9 +11,6 @@ const imgProducto = document.getElementById("imgProducto");
 const articulo = document.getElementById("articulo");
 const precioUnitario = document.getElementById("precioUnitario");
 const cantidad = document.getElementById("cantidad");
-const domicilio = document.getElementById("domicilio");
-const retiro = document.getElementById("retiro");
-const formaEnvio = document.getElementsByName("formaenvio");
 
 // cantidad = cantidad.parseInt();
 const subTotalCalculado = document.getElementById("subTotalCalculado");
@@ -44,25 +41,6 @@ function preVenta(productoElegido) {
       cantidadActual * productoElegido.precio
     } y ademas ${formatoEnvio} con el id ${idProducto}`;
     console.log(cantidadActual);
-  });
-
-  domicilio.addEventListener("change", (e) => {
-    e.preventDefault();
-    for (let i = 0; i < formaEnvio.length; i++) {
-      if (formaEnvio[i].checked) {
-        formatoEnvio = formaEnvio[i].value;
-        console.log(formaEnvio[i].value);
-      }
-    }
-  });
-  retiro.addEventListener("change", (e) => {
-    e.preventDefault();
-    for (let i = 0; i < formaEnvio.length; i++) {
-      if (formaEnvio[i].checked) {
-        formatoEnvio = formaEnvio[i].value;
-        console.log(formaEnvio[i].value);
-      }
-    }
   });
 }
 
