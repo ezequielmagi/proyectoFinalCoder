@@ -572,18 +572,22 @@
     width: 16%;
   }
   .hero ul {
+    align-content: center;
+    align-items: center;
     display: flex;
+    flex-direction: row;
+    height: 100%;
     justify-content: space-around;
-    margin-right: 30px;
   }
   .hero li {
+    align-items: center;
     cursor: pointer;
     font-size: 1.5em;
-    margin: 0 10px;
+    margin: 0px 10px;
   }
 
   .hero li:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid white;
   }
 
   .main {

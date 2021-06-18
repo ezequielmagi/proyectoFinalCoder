@@ -19,12 +19,14 @@ linkInicio.addEventListener("click", (evento) => {
   if (screen.width >= 1022) {
     about.style.display = "none";
     main.style.display = "flex";
+    main.style.flexDirection = "row";
     contact.style.display = "none";
     filter.style.display = "none";
     myProducts.style.display = "none";
   } else {
     about.style.display = "none";
-    main.style.display = "block";
+    main.style.display = "flex";
+    main.style.flexDirection = "column";
     contact.style.display = "none";
     filter.style.display = "none";
     myProducts.style.display = "none";
