@@ -29,7 +29,8 @@ const listarproductos = async () => {
     <h5 class="producto-titulo">${producto.articulo}</h5>
     <p class="producto-description">${producto.description}</p>
     <p class="precio--producto">Precio: $ ${producto.precio}</p>
-    <button onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
+    <p class="productoId oculto">${producto.id}</p>
+    <button class='agregarAlCarrito' onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
     
     </div>
     `;
@@ -58,7 +59,7 @@ const listarproductos = async () => {
     <img src="${producto.img}"/>
     <h5 class="producto-titulo">${producto.articulo}</h5>
     <p class="producto-description">${producto.description}</p>
-    <p class="precio--producto">Precio: $ ${producto.precio}</p>
+    <p class="precio--producto">${producto.precio}</p>
     <button onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
     </div>
     `;
@@ -68,22 +69,22 @@ const listarproductos = async () => {
   }
 };
 
-const agregarAlCarrito = async (id) => {
-  const resp = await fetch(URL);
-  const data = await resp.json();
+// const agregarAlCarrito = async (id) => {
+//   const resp = await fetch(URL);
+//   const data = await resp.json();
 
-  const productoElegido = data.find((p) => p.id === id);
+//   const productoElegido = data.find((p) => p.id === id);
 
-  const preVentaContainer = document.getElementById("preventa");
-  preVentaContainer.classList.toggle("preVenta-active");
-  preVenta(productoElegido);
-  carrito.push(productoElegido);
-  if (productoElegido) {
-    //quitamos esto para no agregar el producto al carrito por ahoraaa
-    // carrito.push(productoElegido);
-  }
-  actualizarCarrito(productoElegido);
-};
+// const preVentaContainer = document.getElementById("preventa");
+// preVentaContainer.classList.toggle("preVenta-active");
+// preVenta(productoElegido);
+// carrito.push(productoElegido);
+// if (productoElegido) {
+//quitamos esto para no agregar el producto al carrito por ahoraaa
+// carrito.push(productoElegido);
+//   }
+//   actualizarCarrito(productoElegido);
+// };
 
 const nuevoActualizarCarrito = () => {};
 

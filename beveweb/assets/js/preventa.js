@@ -1,10 +1,10 @@
-const preVentaContainer = document.getElementById("preventa");
-const closePreventa = document.getElementById("close-button");
+// const preVentaContainer = document.getElementById("preventa");
+// const closePreventa = document.getElementById("close-button");
 
-closePreventa.addEventListener("click", (e) => {
-  e.preventDefault();
-  preVentaContainer.classList.remove("preVenta-active");
-});
+// closePreventa.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   preVentaContainer.classList.remove("preVenta-active");
+// });
 
 // referencias html
 const imgProducto = document.getElementById("imgProducto");
