@@ -28,7 +28,7 @@ const listarproductos = async () => {
     <img alt:"imagen de producto" src="${producto.img}"/>
     <h5 class="producto-titulo">${producto.articulo}</h5>
     <p class="producto-description">${producto.description}</p>
-    <p class="precio--producto">Precio: $ ${producto.precio}</p>
+    <p class="precio--producto">${producto.precio}</p>
     <p class="productoId oculto">${producto.id}</p>
     <button class='agregarAlCarrito' onclick=agregarAlCarrito(${producto.id}) class="boton-agregar">Agregar al carrito</button>
     

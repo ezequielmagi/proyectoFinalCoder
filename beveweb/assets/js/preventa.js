@@ -7,13 +7,13 @@
 // });
 
 // referencias html
-const imgProducto = document.getElementById("imgProducto");
-const articulo = document.getElementById("articulo");
-const precioUnitario = document.getElementById("precioUnitario");
-const cantidad = document.getElementById("cantidad");
+// const imgProducto = document.getElementById("imgProducto");
+// const articulo = document.getElementById("articulo");
+// const precioUnitario = document.getElementById("precioUnitario");
+// const cantidad = document.getElementById("cantidad");
 
 // cantidad = cantidad.parseInt();
-const subTotalCalculado = document.getElementById("subTotalCalculado");
+// const subTotalCalculado = document.getElementById("subTotalCalculado");
 //multiplicador
 let finale;
 let subTotal;
@@ -23,25 +23,24 @@ let formatoEnvio;
 
 //
 function preVenta(productoElegido) {
-  subTotalCalculado.textContent = `$ ${productoElegido.precio}`;
-  imgProducto.setAttribute("src", productoElegido.img);
-  articulo.textContent = productoElegido.articulo;
-  precioUnitario.textContent = `$ ${productoElegido.precio}`;
-  idProducto = productoElegido.id;
-
-  cantidad.addEventListener("change", (e) => {
-    e.preventDefault();
-    cantidadActual = parseInt(cantidad.value);
-    subTotalCalculado.textContent = `$ ${
-      productoElegido.precio * cantidadActual
-    }`;
-    finale = `usted se lleva ${cantidadActual} de ${
-      productoElegido.articulo
-    } por ${
-      cantidadActual * productoElegido.precio
-    } y ademas ${formatoEnvio} con el id ${idProducto}`;
-    console.log(cantidadActual);
-  });
+  // subTotalCalculado.textContent = `$ ${productoElegido.precio}`;
+  // imgProducto.setAttribute("src", productoElegido.img);
+  // articulo.textContent = productoElegido.articulo;
+  // precioUnitario.textContent = `$ ${productoElegido.precio}`;
+  // idProducto = productoElegido.id;
+  // cantidad.addEventListener("change", (e) => {
+  //   e.preventDefault();
+  //   cantidadActual = parseInt(cantidad.value);
+  //   subTotalCalculado.textContent = `$ ${
+  //     productoElegido.precio * cantidadActual
+  //   }`;
+  //   finale = `usted se lleva ${cantidadActual} de ${
+  //     productoElegido.articulo
+  //   } por ${
+  //     cantidadActual * productoElegido.precio
+  //   } y ademas ${formatoEnvio} con el id ${idProducto}`;
+  //   console.log(cantidadActual);
+  // });
 }
 
 let carritox = [];

@@ -26,10 +26,17 @@ class Carrito {
   mostrarEnPreventa(infoProducto) {
     preVentaContainer.classList.toggle("preVenta-active");
     subTotalCalculado.textContent = `$ ${infoProducto.precio}`;
-    imgProducto.setAttribute("src", infoProducto.img);
-    articulo.textContent = infoProducto.articulo;
+    imgProducto.setAttribute("src", infoProducto.imagen);
+    articulo.textContent = infoProducto.titulo;
     precioUnitario.textContent = `$ ${infoProducto.precio}`;
-    idProducto = infoProducto.id;
+
+    cantidad.addEventListener("change", (e) => {
+      e.preventDefault();
+      cantidadActual = parseInt(cantidad.value);
+      subTotalCalculado.textContent = `$ ${
+        infoProducto.precio * cantidadActual
+      }`;
+    });
   }
 }
 
@@ -38,6 +45,11 @@ const carro = new Carrito();
 const productos = document.getElementById("products");
 const preVentaContainer = document.getElementById("preventa");
 const closePreventa = document.getElementById("close-button");
+const imgProducto = document.getElementById("imgProducto");
+const articulo = document.getElementById("articulo");
+const precioUnitario = document.getElementById("precioUnitario");
+const cantidad = document.getElementById("cantidad");
+const subTotalCalculado = document.getElementById("subTotalCalculado");
 
 closePreventa.addEventListener("click", (e) => {
   e.preventDefault();
